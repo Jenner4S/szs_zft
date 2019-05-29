@@ -1,0 +1,14 @@
+<!--pages/list/list.wxml-->
+<search-bar></search-bar>
+<view class="solid bg-white text-xxl padding">
+  <view class="section section_gap">
+  <view class='price-info'>
+   <text class="cuIcon-moneybag lg text-red light icon-price"></text>
+  {{price}}</view>
+  <view class="body-view">
+    <slider bindchange="slider2change" step="10" max="201"/>
+  </view>
+  <view class='price-auto'>{{start}} - {{end}}</view>
+</view>
+</view>
+<card-list></card-list>

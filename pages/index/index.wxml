@@ -1,0 +1,33 @@
+<!-- <l-icon name="add"> </l-icon>
+      <l-tabs bind:linchange="changeTabs">
+        <l-tabpanel tab="京东物流" key="one" slot="one">
+          <view class="tab-content">京东物流</view>
+        </l-tabpanel>
+        <l-tabpanel tab="品牌" key="two" slot="two">
+          <view class="tab-content">品牌</view>
+        </l-tabpanel>
+        <l-tabpanel tab="接口" key="three" slot="three">
+          <view class="tab-content">接口</view>
+        </l-tabpanel>
+        <l-tabpanel tab="面板" key="four" slot="four">
+          <view class="tab-content">面板</view>
+        </l-tabpanel>
+      </l-tabs> -->
+
+<swiper-banner swiper_style="card-swiper"></swiper-banner>
+<!-- <tags-list></tags-list> -->
+
+<scroll-view class="containers">
+  <view class="scrolltxt">
+    <view class="marquee_box">
+      <view class="marquee_text" style="transform: translateX(-{{marqueeDistance}}px)">
+        <text>{{text}}</text>
+        <text style="margin-right:{{marquee_margin}}px;"></text>
+        <text style="margin-right:{{marquee_margin}}px;">{{text}}</text>        
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+
+<card-list></card-list>
