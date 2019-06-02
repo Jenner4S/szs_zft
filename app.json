@@ -8,7 +8,6 @@
   "usingComponents": {
     "search-bar": "components/searchbar/searchbar",
     "swiper-banner": "components/swiper/swiper",
-    "card-list": "components/card/card",
     "tags-list": "components/tags/tags"
   },
   "window": {

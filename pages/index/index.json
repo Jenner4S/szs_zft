@@ -1,3 +1,15 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "content-title": "../../components/content-title/index",
+    "l-card": "../../dist/card/index",
+    "l-icon": "../../dist/icon/index",
+    "l-tag": "../../dist/tag/index",
+    "content-card": "../../components/content-card/index",
+    "l-notice-bar": "../../dist/notice-bar/index",
+
+    "l-tabs": "../../dist/tabs/index",
+    "l-combined-tabs": "../../dist/combined-tabs/index",
+    "l-tabpanel": "../../dist/tabpanel/index",
+    "l-button": "../../dist/button/index"
+  }
 }
