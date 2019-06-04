@@ -1,4 +1,4 @@
-    <content-card l-content="content" name="滑动切换">
+    <!-- <content-card l-content="content">
       <l-tabs l-class-header="swipeable-header" l-class-inactive="swipeable-class-inactive" l-class-line="line-class" l-class-active="swipeable-class-active" active-key="two" bind:linchange="changeTabs" swipeable has-line="{{true}}" aminmated-for-line="{{true}}">
         <l-tabpanel tab="推荐" key="one" slot="one">
           <view class="tab-content">推荐</view>
@@ -10,13 +10,8 @@
           <view class="tab-content">发现</view>
         </l-tabpanel>
       </l-tabs>
-    </content-card>
-
-    
-
-
+    </content-card> -->
 <swiper-banner swiper_style="card-swiper"></swiper-banner>
-
   <content-card cardPadding="{{false}}">
     <l-notice-bar style="margin-bottom:20rpx" type="swip" swip-arr="{{arr}}" front-icon-name="notification" bind:lintap="onSwip"></l-notice-bar>
   </content-card>

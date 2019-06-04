@@ -30,7 +30,7 @@
 
 .swipeable-header {
   margin: 0 auto;
-  width: 100% !important;
+  width: 327rpx !important;
   border: 0 !important;
 }
 
