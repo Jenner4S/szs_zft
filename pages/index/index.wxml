@@ -1,27 +1,132 @@
-    <!-- <content-card l-content="content">
-      <l-tabs l-class-header="swipeable-header" l-class-inactive="swipeable-class-inactive" l-class-line="line-class" l-class-active="swipeable-class-active" active-key="two" bind:linchange="changeTabs" swipeable has-line="{{true}}" aminmated-for-line="{{true}}">
-        <l-tabpanel tab="推荐" key="one" slot="one">
-          <view class="tab-content">推荐</view>
-        </l-tabpanel>
-        <l-tabpanel tab="广场" key="two" slot="two">
-          <view class="tab-content">广场</view>
-        </l-tabpanel>
-        <l-tabpanel tab="发现" key="three" slot="three">
-          <view class="tab-content">发现</view>
-        </l-tabpanel>
-      </l-tabs>
-    </content-card> -->
-<swiper-banner swiper_style="card-swiper"></swiper-banner>
+<swiper-banner swiper_style="screen-swiper"></swiper-banner>
   <content-card cardPadding="{{false}}">
     <l-notice-bar style="margin-bottom:20rpx" type="swip" swip-arr="{{arr}}" front-icon-name="notification" bind:lintap="onSwip"></l-notice-bar>
   </content-card>
-
-
-
-  <view class="card-top">
+    <view class="card-top">
     <view class="card-dot"></view>
-    <view class="content-name">卡片类型（primary）</view>
+    <view class="content-name">热门房源</view>
   </view>
+
+  <l-card type="primary" l-class="card" l-img-class="right-card" position="right" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711458710&di=e4af10c03585ed60f2b51bc61393cef8&imgtype=0&src=http%3A%2F%2Fimg0.pconline.com.cn%2Fpconline%2Fbizi%2Fdesktop%2F1410%2FA2_1.jpg"
+    title="碧海湾 泰华阳光海">
+    <view class="content">
+     <view class='info'>
+        合租 3室2厅 1号线西乡
+     </view>
+    </view>
+      <view class='tagsBox '>
+        <view class="cu-tag round bg-grey light sm">电梯房</view>
+        <view class="cu-tag round bg-cyan light sm">热水</view>
+         <view class="cu-tag round bg-cyan light sm">热水</view>
+          <view class="cu-tag round bg-cyan light sm">热水</view>
+      </view>
+      <view class='price'>1500/月</view> 
+  </l-card>
+    <l-card type="primary" l-class="card" l-img-class="right-card" position="right" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711458710&di=e4af10c03585ed60f2b51bc61393cef8&imgtype=0&src=http%3A%2F%2Fimg0.pconline.com.cn%2Fpconline%2Fbizi%2Fdesktop%2F1410%2FA2_1.jpg"
+    title="碧海湾 泰华阳光海">
+    <view class="content">
+     <view class='info'>
+        合租 3室2厅 1号线西乡
+     </view>
+    </view>
+      <view class='tagsBox '>
+        <view class="cu-tag round bg-grey light sm">电梯房</view>
+        <view class="cu-tag round bg-cyan light sm">热水</view>
+         <view class="cu-tag round bg-cyan light sm">热水</view>
+          <view class="cu-tag round bg-cyan light sm">热水</view>
+      </view>
+      <view class='price'>1500/月</view> 
+  </l-card>
+    <l-card type="primary" l-class="card" l-img-class="right-card" position="right" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711458710&di=e4af10c03585ed60f2b51bc61393cef8&imgtype=0&src=http%3A%2F%2Fimg0.pconline.com.cn%2Fpconline%2Fbizi%2Fdesktop%2F1410%2FA2_1.jpg"
+    title="碧海湾 泰华阳光海">
+    <view class="content">
+     <view class='info'>
+        合租 3室2厅 1号线西乡
+     </view>
+    </view>
+      <view class='tagsBox '>
+        <view class="cu-tag round bg-grey light sm">电梯房</view>
+        <view class="cu-tag round bg-cyan light sm">热水</view>
+         <view class="cu-tag round bg-cyan light sm">热水</view>
+          <view class="cu-tag round bg-cyan light sm">热水</view>
+      </view>
+      <view class='price'>1500/月</view> 
+  </l-card>
+    <l-card type="primary" l-class="card" l-img-class="right-card" position="right" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711458710&di=e4af10c03585ed60f2b51bc61393cef8&imgtype=0&src=http%3A%2F%2Fimg0.pconline.com.cn%2Fpconline%2Fbizi%2Fdesktop%2F1410%2FA2_1.jpg"
+    title="碧海湾 泰华阳光海">
+    <view class="content">
+     <view class='info'>
+        合租 3室2厅 1号线西乡
+     </view>
+    </view>
+      <view class='tagsBox '>
+        <view class="cu-tag round bg-grey light sm">电梯房</view>
+        <view class="cu-tag round bg-cyan light sm">热水</view>
+         <view class="cu-tag round bg-cyan light sm">热水</view>
+          <view class="cu-tag round bg-cyan light sm">热水</view>
+      </view>
+      <view class='price'>1500/月</view> 
+  </l-card>
+    <l-card type="primary" l-class="card" l-img-class="right-card" position="right" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711458710&di=e4af10c03585ed60f2b51bc61393cef8&imgtype=0&src=http%3A%2F%2Fimg0.pconline.com.cn%2Fpconline%2Fbizi%2Fdesktop%2F1410%2FA2_1.jpg"
+    title="碧海湾 泰华阳光海">
+    <view class="content">
+     <view class='info'>
+        合租 3室2厅 1号线西乡
+     </view>
+    </view>
+      <view class='tagsBox '>
+        <view class="cu-tag round bg-grey light sm">电梯房</view>
+        <view class="cu-tag round bg-cyan light sm">热水</view>
+         <view class="cu-tag round bg-cyan light sm">热水</view>
+          <view class="cu-tag round bg-cyan light sm">热水</view>
+      </view>
+      <view class='price'>1500/月</view> 
+  </l-card>
+    <l-card type="primary" l-class="card" l-img-class="right-card" position="right" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711458710&di=e4af10c03585ed60f2b51bc61393cef8&imgtype=0&src=http%3A%2F%2Fimg0.pconline.com.cn%2Fpconline%2Fbizi%2Fdesktop%2F1410%2FA2_1.jpg"
+    title="碧海湾 泰华阳光海">
+    <view class="content">
+     <view class='info'>
+        合租 3室2厅 1号线西乡
+     </view>
+    </view>
+      <view class='tagsBox '>
+        <view class="cu-tag round bg-grey light sm">电梯房</view>
+        <view class="cu-tag round bg-cyan light sm">热水</view>
+         <view class="cu-tag round bg-cyan light sm">热水</view>
+          <view class="cu-tag round bg-cyan light sm">热水</view>
+      </view>
+      <view class='price'>1500/月</view> 
+  </l-card>
+    <l-card type="primary" l-class="card" l-img-class="right-card" position="right" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711458710&di=e4af10c03585ed60f2b51bc61393cef8&imgtype=0&src=http%3A%2F%2Fimg0.pconline.com.cn%2Fpconline%2Fbizi%2Fdesktop%2F1410%2FA2_1.jpg"
+    title="碧海湾 泰华阳光海">
+    <view class="content">
+     <view class='info'>
+        合租 3室2厅 1号线西乡
+     </view>
+    </view>
+      <view class='tagsBox '>
+        <view class="cu-tag round bg-grey light sm">电梯房</view>
+        <view class="cu-tag round bg-cyan light sm">热水</view>
+         <view class="cu-tag round bg-cyan light sm">热水</view>
+          <view class="cu-tag round bg-cyan light sm">热水</view>
+      </view>
+      <view class='price'>1500/月</view> 
+  </l-card>
+    <l-card type="primary" l-class="card" l-img-class="right-card" position="right" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711458710&di=e4af10c03585ed60f2b51bc61393cef8&imgtype=0&src=http%3A%2F%2Fimg0.pconline.com.cn%2Fpconline%2Fbizi%2Fdesktop%2F1410%2FA2_1.jpg"
+    title="碧海湾 泰华阳光海">
+    <view class="content">
+     <view class='info'>
+        合租 3室2厅 1号线西乡
+     </view>
+    </view>
+      <view class='tagsBox '>
+        <view class="cu-tag round bg-grey light sm">电梯房</view>
+        <view class="cu-tag round bg-cyan light sm">热水</view>
+         <view class="cu-tag round bg-cyan light sm">热水</view>
+          <view class="cu-tag round bg-cyan light sm">热水</view>
+      </view>
+      <view class='price'>1500/月</view> 
+  </l-card>
 
   <l-card type="primary" l-class="card" image="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1549701108&di=d141540da70a7f92abd6f90ffef7460c&src=http://ztd00.photos.bdimg.com/ztd/w=700;q=50/sign=0b1f180b5a43fbf2c52ca4238045bbbd/b7fd5266d0160924665b9f18dd0735fae6cd34b2.jpg"
     title="新疆精选苹果">
@@ -30,10 +135,10 @@
     </view>
   </l-card>
 
-    <view class="card-top">
+<view class="card-top">
     <view class="card-dot"></view>
     <view class="content-name">卡片类型（cover）</view>
-  </view>
+</view>
 
   <l-card type="cover" l-class="card" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549736747027&di=8e75e11a150193e0f8a555e107f921eb&imgtype=0&src=http%3A%2F%2Fwww.lanxu.net%2Fuploads%2Fallimg%2F20190201%2F201902010602093105.jpg"
     title="年味儿的科技大升级">
@@ -44,13 +149,13 @@
 
   <view class="card-top">
     <view class="card-dot"></view>
-    <view class="content-name">卡片类型（avatar）</view>
+    <view class="content-name">找室友</view>
   </view>
 
   <l-card type="avatar" l-class="card" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711852726&di=6b454cec0b57f62d46089487454fa56f&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201609%2F14%2F20160914062816_SC8KU.jpeg"
     title="七月在夏天" describe="18个小时前">
     <view class="avter-content">
-      很简单，豆瓣现在这样就给大家指了一条明路:以后凡是这种国产的风口浪尖的的片子，会涉及到各方背后利益关系的片子...
+      该房子位于福田艺丰花园D区，离九号线孖岭站地铁口3分钟路程，之前和朋友一起居住，由于朋友工作调动，空出三室中一间次卧，现出租。房租为1950一月，物业水电宽带等另算。物业100一月，由三间房均摊。水电大概人均50左右一月，开空调就贵一些。最早六月中入住xxxxxxxxxxxxx
     </view>
     <view class="avter-share-container">
       <view class="like-container">
@@ -69,24 +174,6 @@
             size="large">+ 关注</l-tag>
   </l-card>
 
-  <view class="card-top">
-    <view class="card-dot"></view>
-    <view class="content-name">图片位置</view>
-  </view>
-
-  <l-card type="primary" l-class="card" l-img-class="right-card" position="right" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711458710&di=e4af10c03585ed60f2b51bc61393cef8&imgtype=0&src=http%3A%2F%2Fimg0.pconline.com.cn%2Fpconline%2Fbizi%2Fdesktop%2F1410%2FA2_1.jpg"
-    title="做一个热爱生活的人！">
-    <view class="content">
-      很简单，豆瓣现在这样就给大家指了一条明路:以后凡是这种国产的风口浪尖的的片子...
-    </view>
-  </l-card>
-
-  <l-card type="primary" l-class="card" l-img-class="right-card" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711458710&di=e4af10c03585ed60f2b51bc61393cef8&imgtype=0&src=http%3A%2F%2Fimg0.pconline.com.cn%2Fpconline%2Fbizi%2Fdesktop%2F1410%2FA2_1.jpg"
-    title="做一个热爱生活的人！">
-    <view class="content">
-      很简单，豆瓣现在这样就给大家指了一条明路:以后凡是这种国产的风口浪尖的的片子...
-    </view>
-  </l-card>
 
   <view class="card-top">
     <view class="card-dot"></view>

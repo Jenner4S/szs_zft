@@ -56,3 +56,13 @@
 .line-class {
   width: 30rpx !important;
 }
+.tagsBox{
+  margin-top: 10rpx;
+}
+.info{
+  width: 100%；
+}
+.price{
+  margin-top: 10rpx;
+  color: #e54d42;
+}
