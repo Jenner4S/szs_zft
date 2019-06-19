@@ -48,3 +48,10 @@
   font-size: 20px;
   text-align: center
 }
+.col-class {
+	width: 100%;
+	display: block;
+	height: 100%;
+	margin: 0;
+	pointer-events: none;
+}

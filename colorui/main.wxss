@@ -2551,12 +2551,12 @@ swiper[class*="-dot"] .wx-swiper-dots {
 }
 
 swiper.square-dot .wx-swiper-dot {
-	background-color: var(--white);
+	background-color:#ffffff;
 	opacity: 0.4;
 	width: 10rpx;
 	height: 10rpx;
 	border-radius: 20rpx;
-	margin: 0 8rpx !important;
+	margin: 10rpx 8rpx !important;
 }
 
 swiper.square-dot .wx-swiper-dot.wx-swiper-dot-active {
@@ -2568,7 +2568,7 @@ swiper.round-dot .wx-swiper-dot {
 	width: 10rpx;
 	height: 10rpx;
 	position: relative;
-	margin: 4rpx 8rpx !important;
+	margin: 10rpx 8rpx !important;
 }
 
 swiper.round-dot .wx-swiper-dot.wx-swiper-dot-active::after {
@@ -2581,7 +2581,7 @@ swiper.round-dot .wx-swiper-dot.wx-swiper-dot-active::after {
 	right: 0;
 	bottom: 0;
 	margin: auto;
-	background-color: var(--white);
+
 	border-radius: 20rpx;
 }
 
@@ -2592,6 +2592,8 @@ swiper.round-dot .wx-swiper-dot.wx-swiper-dot-active {
 
 .screen-swiper {
 	min-height: 375rpx;
+	/*padding: 30rpx;*/
+	border-radius: 12rpx;
 }
 
 .screen-swiper image,
@@ -2603,18 +2605,24 @@ swiper.round-dot .wx-swiper-dot.wx-swiper-dot-active {
 	height: 100%;
 	margin: 0;
 	pointer-events: none;
+	/*border-radius: 10rpx;*/
+	/*transform: scale(0.91);*/
+	/*transition: all 0.2s ease-in 0s;*/
 }
 
 .card-swiper {
-	height: 420rpx !important;
+	height: 420rpx;
+
 }
 
 .card-swiper swiper-item {
-	width: 610rpx !important;
-	left: 70rpx;
+	width: 100%;
+	/*left: 70rpx;*/
 	box-sizing: border-box;
-	padding: 40rpx 0rpx 70rpx;
+	height: 600rpx;
 	overflow: initial;
+	padding:0 40rpx;
+
 }
 
 .card-swiper swiper-item .swiper-item {

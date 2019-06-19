@@ -1,0 +1,49 @@
+<!--components/select-form/select-form.wxml-->
+<view class="origin" wx-if="{{selectType=='regions'}}">
+    <view class="left-select">
+        <view class="lect-item {{ActiveColor?'active-color':''}}"  bindtap='RigionsClick'>区域</view>
+        <view class="lect-item {{!ActiveColor?'active-color':''}}"  bindtap='SubwayClick'>地铁</view>
+    </view>
+    <view class="left-right">
+        <scroll-view scroll-y style="height: 400rpx;" >
+            <view bindtap='RigionsselectClick' data-key="region" data-value="{{item}}" wx-if="{{show_regions}}" class="lect-item" wx:for="{{regions}}" wx:key="item" wx:for-item="item">
+                {{item}}
+            </view>
+            <view bindtap='RigionsselectClick' data-key="region" data-value="{{item}}" wx-if="{{!show_regions}}" class="lect-item" wx:for="{{subway}}" wx:key="item" wx:for-item="item">
+                {{item}}
+            </view>
+        </scroll-view>
+    </view>
+</view>
+<view class="house-type"  wx-if="{{selectType=='house-type'}}">
+    <scroll-view scroll-y style="height: 400rpx;" >
+        <view class="lect-item" bindtap='RigionsselectClick' data-key="house-type" data-value="{{item}}" wx:for="{{house_types}}" wx:key="item" wx:for-item="item">
+            {{item}}
+        </view>
+    </scroll-view>
+</view>
+<view class="apartment" wx-if="{{selectType=='money'}}">
+    <view class="solid bg-white text-xxl padding">
+        <view class="section section_gap">
+            <view class='price-info'>
+                <text class="cuIcon-moneybag lg text-cyan icon-price"></text>
+                <view>{{price}}</view>
+            </view>
+            <view class="body-view">
+                <slider bindchange="slider2change" step="10" max="201"/>
+            </view>
+            <view class='price-auto'>{{start}} - {{end}}</view>
+        </view>
+    </view>
+</view>
+<view class="apartment" wx-if="{{selectType=='apartment'}}">
+    <scroll-view scroll-y style="height: 400rpx;" >
+        <view class="lect-item" bindtap='RigionsselectClick' data-key="apartment" data-value="{{item}}" wx:for="{{apartment}}" wx:key="item" wx:for-item="item">
+            {{item}}
+        </view>
+    </scroll-view>
+</view>
+
+
+
+

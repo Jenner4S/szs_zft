@@ -1,0 +1,43 @@
+/* components/select-form/select-form.wxss */
+.origin{
+    display: flex;
+    flex-direction: row;
+}
+.left-select,.left-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.left-right{
+    background: #F2F2F2;
+}
+.lect-item{
+    border-bottom: 1px solid #EEE0E5;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+}
+.active-color{
+    color: #7CCD7C;
+}
+
+.price-info,.price-auto{
+    display: flex;
+    color: #e54d42;
+    justify-content: center;
+}
+
+.price-info{
+    color: black;
+    font: bold;
+}
+.price-auto{
+    color: grey;
+    font-size: 15px;
+}
+.icon-price{
+    font-size: 20px;
+}
+
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";

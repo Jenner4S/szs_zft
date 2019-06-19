@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-card": "../../dist/card/index"
+  },
+    "navigationBarBackgroundColor": "#87CEFA",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "找室友"
+}

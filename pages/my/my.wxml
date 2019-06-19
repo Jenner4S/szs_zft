@@ -1,0 +1,42 @@
+<!--pages/my/my.wxml-->
+<button wx-if="{{isLogin}}" class="confirm-btn"  open-type="getUserInfo" bindgetuserinfo="login">授权登录</button>
+<view  wx-if="{{isLogin}}">
+    <view class='headerbox'>
+        <view class='user_info'>
+            <open-data  class="avatar" type="userAvatarUrl"></open-data>
+            <view class='phone'>
+                <open-data type="userNickName" lang="zh_CN"></open-data>
+                <!--        <open-data type="userGender" lang="zh_CN"></open-data>-->
+                <!--        <open-data type="userCity" lang="zh_CN"></open-data>-->
+                <!--        <open-data type="userProvince" lang="zh_CN"></open-data>-->
+            </view>
+            <view   class='info-icon'>
+                <l-icon name="right" color='white'></l-icon>
+            </view>
+        </view>
+    </view>
+    <l-list title="我的房源" rightDesc='查看全部' color='grey'></l-list>
+
+    <view class="view-container">
+        <l-grid row-num="4" show-row-border="{{true}}">
+            <l-grid-item wx:for="{{grids2}}" wx:key="{{index}}" key="{{index}}" slot="{{index}}" l-grid-item="grid-item">
+                <l-icon name="{{item.image}}" />
+                <view class="text">{{item.text}}</view>
+            </l-grid-item>
+        </l-grid>
+    </view>
+
+    <view class='selectBox'>
+        <l-list title="设置"  />
+        <l-list title="xxx"/>
+        <l-list title="xxx" />
+        <l-list title="xxx" isLink="{{is_false}}">
+            <!--is_false 不显示右边的icon -->
+            <view slot="right-section">
+                <switch />
+            </view>
+        </l-list>
+    </view>
+</view>
+
+

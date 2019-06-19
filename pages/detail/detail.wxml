@@ -1,5 +1,5 @@
 <!--pages/detail/detail.wxml-->
-<!-- <swiper-banner swiper_style="screen-swiper"></swiper-banner> -->
+<swiper-banner style="width: 200rpx;" swiper_style="screen-swiper"></swiper-banner>
 
   <view class="solids-bottom padding-xs flex align-center">
     <view class="flex-sub text-left">

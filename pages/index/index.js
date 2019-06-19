@@ -12,7 +12,6 @@ Page({
         this.initTabs();
       }
     },
-
   },
   options: {
     multipleSlots: true // 在组件定义时的选项中启用多slot支持
@@ -55,6 +54,7 @@ Page({
 
   data: {
     tabList: [],
+    houses:[],
     currentIndex: 0,
     transformX: 0,
     arr: ['我是通告栏一', '我是通告栏二', '我是通告栏三'],
@@ -63,13 +63,56 @@ Page({
   },
 
   onLoad: function () {
+    var that = this
+    wx.request({
+      url: 'http://127.0.0.1:8000/api/house/index',
+      method: 'GET',
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      success:function(res) {
+        that.setData({
+          houses : res.data
+        })
+      }
+    })
 
+    //   var token = ""
+    //   wx.getStorage({
+    //   key: 'jwt_token',
+    //   success (res) {
+    //       token = res.data
+    //       console.log( token)
+    //   }
+    // });
+    // console.log(token)
+    //   wx.request({
+    //       url: 'http://127.0.0.1:8000/api/account/index',
+    //       data: {
+    //           "token":token
+    //       },
+    //       method: 'GET',
+    //       success:function(res) {
+    //           console.log(res)
+    //       }
+    //   })
   },
 
   /**
    * 组件的方法列表
    */
+  searchbtnclick: function (e) {
+    wx.navigateTo({
+      url: '/pages/list/list'
+    })
+  },
+  handleClick: function(){
+    wx.navigateTo({
+      url: '/pages/detail/detail'
+    })
+  },
   methods: {
+
     initTabs(val = this.data.activeKey) {
       let items = this.getRelationNodes('../tabpanel/index');
       if (items.length > 0) {

@@ -1,3 +1,10 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+        "l-card": "../../dist/card/index",
+        "l-icon": "../../dist/icon/index",
+        "select-form": "../../components/select-form/select-form"
+  },
+    "navigationBarBackgroundColor": "#87CEFA",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "房源查询"
 }

@@ -1,5 +1,7 @@
 /* pages/nav/pages/tabs/index.wxss */
-
+swiper-banner{
+  margin-top: 50rpx;
+}
 .content {
   /* height: 400rpx; */
   position: relative;
@@ -52,7 +54,6 @@
   width: 44rpx !important;
   height: 44rpx !important;
 }
-
 .line-class {
   width: 30rpx !important;
 }
@@ -62,7 +63,17 @@
 .info{
   width: 100%；
 }
+.detail{
+  display: flex;
+  flex-direction: row;
+  margin-top: 15rpx;
+}
 .price{
-  margin-top: 10rpx;
   color: #e54d42;
+}
+.create-time{
+  margin-left: auto;
+  font-weight: lighter;
+  color: #A1A1A1;
+  font-size: 25rpx;
 }

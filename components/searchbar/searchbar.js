@@ -25,26 +25,15 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    showInput: function () {
-      this.setData({
-        inputShowed: true
-      });
+    toSearch:function(e){
+      var value = this.data.inputVal;
+      this.triggerEvent('ChildInputValue',value);
     },
-    hideInput: function () {
+    listenerSearchInput:function(e){
+      var value = e.detail.value
       this.setData({
-        inputVal: "",
-        inputShowed: false
-      });
-    },
-    clearInput: function () {
-      this.setData({
-        inputVal: ""
-      });
-    },
-    inputTyping: function (e) {
-      this.setData({
-        inputVal: e.detail.value
-      });
+        inputVal:value
+      })
     }
   }
 })

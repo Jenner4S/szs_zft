@@ -1,14 +1,753 @@
 <!--pages/list/list.wxml-->
-<search-bar></search-bar>
-<view class="solid bg-white text-xxl padding">
-  <view class="section section_gap">
-  <view class='price-info'>
-   <text class="cuIcon-moneybag lg text-red light icon-price"></text>
-  {{price}}</view>
-  <view class="body-view">
-    <slider bindchange="slider2change" step="10" max="201"/>
-  </view>
-  <view class='price-auto'>{{start}} - {{end}}</view>
+<view class='{{fixed ? "header-select section-fixed": "header-select"}}'>
+<view hidden='{{!fixed}}' class="header-select section-placeholder"></view>
+        <search-bar bind:ChildInputValue="ChildInputValueHanle"></search-bar>
+        <view class='selectform'>
+          <view class='select-item'   bindtap='SelectBtnClick'  data-type="regions">
+          <view class="{{region.active ?'active-text':''}}">{{region.text}}</view>
+            <l-icon name="down" color='grey' size='15' style="margin-left: 5rpx"></l-icon>
+          </view>
+            <view class='select-item'   bindtap='SelectBtnClick'  data-type="house-type">
+            <view class="{{choose_type.active ?'active-text':''}}">{{choose_type.text}}</view>
+            <l-icon name="down" color='grey'  size='15' style="margin-left: 5rpx"></l-icon>
+          </view>
+            <view class='select-item' bindtap='SelectBtnClick' data-type="money">
+            <view class="{{money.active ?'active-text':''}}" style="font-weight: normal;">{{money.text}}</view>
+            <l-icon name="down" color='grey'  size='15' style="margin-left: 5rpx"></l-icon>
+          </view>
+          <view class='select-item'   bindtap='SelectBtnClick'  data-type="apartment">
+            <view class="{{house_type.active ?'active-text':''}}">{{house_type.text}}</view>
+            <l-icon name="down" color='grey'  size='15' style="margin-left: 5rpx"></l-icon>
+          </view>
+        </view>
+    <view class='selectformshow' wx-if="{{SelectForm}}" animation="{{animation}}">
+        <select-form lastConditions="{{conditions}}" selectType="{{type}}" bind:SelectEvent="HandleSelectEvent"></select-form>
+    </view>
 </view>
+<view bindtouchstart="touchStart">
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img1.doubanio.com/view/group_topic/l/public/p170788398.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073613.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
+    <l-card type="primary" full l-class="card" l-img-class="right-card"image="https://img3.doubanio.com/view/group_topic/l/public/p165073706.webp"
+            title="碧海湾 泰华阳光海">
+        <view class="content">
+            <view class='info'>
+                合租 3室2厅 1号线西乡
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view class="cu-tag round bg-grey light sm">电梯房</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+            <view class="cu-tag round bg-cyan light sm">热水</view>
+        </view>
+        <view class='price'>1500/月</view>
+    </l-card>
 </view>
-<card-list></card-list>
+
+
+
+
+

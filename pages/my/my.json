@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "l-icon":"../../dist/icon/index",
+    "l-list": "../../dist/list/index",
+    "l-grid-item": "../../dist/grid-item/index",
+    "l-grid": "../../dist/grid/index"
+  },
+   "navigationBarBackgroundColor":"#87CEFA",
+   "navigationBarTextStyle":"white",
+   "navigationBarTitleText": "个人中心"
+}

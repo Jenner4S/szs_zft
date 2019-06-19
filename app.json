@@ -1,9 +1,13 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/detail/detail",
     "pages/list/list",
-    "pages/about/about"
+    "pages/detail/detail",
+    "pages/my/my",
+    "pages/index/index",
+    "pages/roommate/roommate",
+    "pages/house-owner/house-owner",
+    "components/select-form/select-form",
+    "pages/publish/publish"
   ],
   "usingComponents": {
     "search-bar": "components/searchbar/searchbar",
@@ -12,9 +16,9 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "深圳市租房团",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "乐橙E家",
+    "navigationBarBackgroundColor": "#87CEFA",
+    "navigationBarTextStyle": "white"
   },
   "permission": {
     "scope.userLocation": {
@@ -22,25 +26,28 @@
     }
   },
   "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#87CEFA",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "image/index1.png",
-        "selectedIconPath": "image/index.png",
+        "iconPath": "image/index.png",
+        "selectedIconPath": "image/index-active.png",
         "text": "首页"
       },
       {
-        "pagePath": "pages/list/list",
-        "iconPath": "image/list1.png",
-        "selectedIconPath": "image/list.png",
-        "text": "列表"
+        "pagePath": "pages/detail/detail",
+        "iconPath": "image/put.png",
+        "selectedIconPath": "image/put-active.png",
+        "text": "发布"
       },
       {
-        "pagePath": "pages/about/about",
-        "iconPath": "image/about1.png",
-        "selectedIconPath": "image/about.png",
-        "text": "关于"
+        "pagePath": "pages/my/my",
+        "iconPath": "image/me.png",
+        "selectedIconPath": "image/me-active.png",
+        "text": "我的"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

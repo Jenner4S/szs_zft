@@ -1,0 +1,127 @@
+<!--pages/roommate/roommate.wxml-->
+  <l-card type="avatar" l-class="card" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711852726&di=6b454cec0b57f62d46089487454fa56f&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201609%2F14%2F20160914062816_SC8KU.jpeg"
+    title="七月在夏天" describe="18个小时前">
+    <view class="avter-content">
+      该房子位于福田艺丰花园D区，离九号线孖岭站地铁口3分钟路程，之前和朋友一起居住，由于朋友工作调动，空出三室中一间次卧，现出租。房租为1950一月，物业水电宽带等另算。物业100一月，由三间房均摊。水电大概人均50左右一月，开空调就贵一些。最早六月中入住xxxxxxxxxxxxx
+    </view>
+    <view class="avter-share-container">
+      <view class="like-container">
+        <l-icon name="like" color="#666" size="28" />
+        <view class="number">160喜欢</view>
+      </view>
+      <view class="like-container">
+        <l-icon name="default" color="#666" size="28" />
+        <view class="number">10评论</view>
+      </view>
+    </view>
+    <l-tag  shape="circle" 
+            bg-color="#f3f3f3" 
+            font-color="#3963BC" 
+            slot="more"
+            size="large">+ 关注</l-tag>
+  </l-card>
+  <l-card type="avatar" l-class="card" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711852726&di=6b454cec0b57f62d46089487454fa56f&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201609%2F14%2F20160914062816_SC8KU.jpeg"
+    title="七月在夏天" describe="18个小时前">
+    <view class="avter-content">
+      该房子位于福田艺丰花园D区，离九号线孖岭站地铁口3分钟路程，之前和朋友一起居住，由于朋友工作调动，空出三室中一间次卧，现出租。房租为1950一月，物业水电宽带等另算。物业100一月，由三间房均摊。水电大概人均50左右一月，开空调就贵一些。最早六月中入住xxxxxxxxxxxxx
+    </view>
+    <view class="avter-share-container">
+      <view class="like-container">
+        <l-icon name="like" color="#666" size="28" />
+        <view class="number">160喜欢</view>
+      </view>
+      <view class="like-container">
+        <l-icon name="default" color="#666" size="28" />
+        <view class="number">10评论</view>
+      </view>
+    </view>
+    <l-tag  shape="circle" 
+            bg-color="#f3f3f3" 
+            font-color="#3963BC" 
+            slot="more"
+            size="large">+ 关注</l-tag>
+  </l-card>
+    <l-card type="avatar" l-class="card" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711852726&di=6b454cec0b57f62d46089487454fa56f&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201609%2F14%2F20160914062816_SC8KU.jpeg"
+    title="七月在夏天" describe="18个小时前">
+    <view class="avter-content">
+      该房子位于福田艺丰花园D区，离九号线孖岭站地铁口3分钟路程，之前和朋友一起居住，由于朋友工作调动，空出三室中一间次卧，现出租。房租为1950一月，物业水电宽带等另算。物业100一月，由三间房均摊。水电大概人均50左右一月，开空调就贵一些。最早六月中入住xxxxxxxxxxxxx
+    </view>
+    <view class="avter-share-container">
+      <view class="like-container">
+        <l-icon name="like" color="#666" size="28" />
+        <view class="number">160喜欢</view>
+      </view>
+      <view class="like-container">
+        <l-icon name="default" color="#666" size="28" />
+        <view class="number">10评论</view>
+      </view>
+    </view>
+    <l-tag  shape="circle" 
+            bg-color="#f3f3f3" 
+            font-color="#3963BC" 
+            slot="more"
+            size="large">+ 关注</l-tag>
+  </l-card>
+    <l-card type="avatar" l-class="card" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711852726&di=6b454cec0b57f62d46089487454fa56f&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201609%2F14%2F20160914062816_SC8KU.jpeg"
+    title="七月在夏天" describe="18个小时前">
+    <view class="avter-content">
+      该房子位于福田艺丰花园D区，离九号线孖岭站地铁口3分钟路程，之前和朋友一起居住，由于朋友工作调动，空出三室中一间次卧，现出租。房租为1950一月，物业水电宽带等另算。物业100一月，由三间房均摊。水电大概人均50左右一月，开空调就贵一些。最早六月中入住xxxxxxxxxxxxx
+    </view>
+    <view class="avter-share-container">
+      <view class="like-container">
+        <l-icon name="like" color="#666" size="28" />
+        <view class="number">160喜欢</view>
+      </view>
+      <view class="like-container">
+        <l-icon name="default" color="#666" size="28" />
+        <view class="number">10评论</view>
+      </view>
+    </view>
+    <l-tag  shape="circle" 
+            bg-color="#f3f3f3" 
+            font-color="#3963BC" 
+            slot="more"
+            size="large">+ 关注</l-tag>
+  </l-card>
+    <l-card type="avatar" l-class="card" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711852726&di=6b454cec0b57f62d46089487454fa56f&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201609%2F14%2F20160914062816_SC8KU.jpeg"
+    title="七月在夏天" describe="18个小时前">
+    <view class="avter-content">
+      该房子位于福田艺丰花园D区，离九号线孖岭站地铁口3分钟路程，之前和朋友一起居住，由于朋友工作调动，空出三室中一间次卧，现出租。房租为1950一月，物业水电宽带等另算。物业100一月，由三间房均摊。水电大概人均50左右一月，开空调就贵一些。最早六月中入住xxxxxxxxxxxxx
+    </view>
+    <view class="avter-share-container">
+      <view class="like-container">
+        <l-icon name="like" color="#666" size="28" />
+        <view class="number">160喜欢</view>
+      </view>
+      <view class="like-container">
+        <l-icon name="default" color="#666" size="28" />
+        <view class="number">10评论</view>
+      </view>
+    </view>
+    <l-tag  shape="circle" 
+            bg-color="#f3f3f3" 
+            font-color="#3963BC" 
+            slot="more"
+            size="large">+ 关注</l-tag>
+  </l-card>
+    <l-card type="avatar" l-class="card" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711852726&di=6b454cec0b57f62d46089487454fa56f&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201609%2F14%2F20160914062816_SC8KU.jpeg"
+    title="七月在夏天" describe="18个小时前">
+    <view class="avter-content">
+      该房子位于福田艺丰花园D区，离九号线孖岭站地铁口3分钟路程，之前和朋友一起居住，由于朋友工作调动，空出三室中一间次卧，现出租。房租为1950一月，物业水电宽带等另算。物业100一月，由三间房均摊。水电大概人均50左右一月，开空调就贵一些。最早六月中入住xxxxxxxxxxxxx
+    </view>
+    <view class="avter-share-container">
+      <view class="like-container">
+        <l-icon name="like" color="#666" size="28" />
+        <view class="number">160喜欢</view>
+      </view>
+      <view class="like-container">
+        <l-icon name="default" color="#666" size="28" />
+        <view class="number">10评论</view>
+      </view>
+    </view>
+    <l-tag  shape="circle" 
+            bg-color="#f3f3f3" 
+            font-color="#3963BC" 
+            slot="more"
+            size="large">+ 关注</l-tag>
+    </l-card>

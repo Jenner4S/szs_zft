@@ -6,6 +6,7 @@ Component({
   options: {
     addGlobalClass: true,
   },
+  externalClasses: ['col-class'],
   properties: {
     "swiper_style":{
       type:String,

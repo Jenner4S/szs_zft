@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+      "navigationBarBackgroundColor": "#87CEFA",
+      "navigationBarTextStyle": "white",
+      "navigationBarTitleText": "详情"
 }
