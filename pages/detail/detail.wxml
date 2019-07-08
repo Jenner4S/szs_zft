@@ -1,34 +1,66 @@
 <!--pages/detail/detail.wxml-->
 <swiper-banner style="width: 200rpx;" swiper_style="screen-swiper"></swiper-banner>
-
-  <view class="solids-bottom padding-xs flex align-center">
-    <view class="flex-sub text-left">
-      <view class="solid-bottom text-xxl padding">
-        <text class="text-price text-red">1000 / 月    押二付</text>
-      </view>
-      <view class="padding">整租· 固戍南昌第二新村</view>
+<view class="contanerbox">
+  <view class="contentbox">
+    <view class="headerbox">
+      <view class="title">整租|固戍南昌第二新村 1室2卫</view>
+      <view class="distance">该房源距离你当前位置100km</view>
     </view>
+    <view class="infobox">
+      <view class="itembox">
+        <view class="top-item">
+          1000 / 月
+        </view>
+        <view class="bottom-item">
+          租金（月付）
+        </view>
+      </view>
+      <view class="itembox">
+        <view class="top-item">
+          13室1厅2卫
+        </view>
+        <view class="bottom-item">
+          户型
+        </view>
+      </view>
+      <view class="itembox">
+        <view class="top-item">
+          13室1厅2卫
+        </view>
+        <view class="bottom-item">
+          户型
+        </view>
+      </view>
+    </view>
+    <view class="infobox">
+      <view class="deractor">
+        楼层：7/5
+      </view>
+      <view class="deractor">
+        装修： 简单装修
+      </view>
+    </view>
+    <view class='descbox'>
+      <view class='house-desc-title'>描述</view>
+      <view class='view-count'>
+        35人想租﹒浏览 2877
+      </view>
+    </view>
+    <view class="house-desc">
+      精美电梯楼单间转租，本单间每个月1240，宽带管理120，十分便宜。独卫，洗衣机，空调等，门口外面每楼都有大垃圾筒，十分方便我是在软件基地上班，这边到南山后海也只要半小时，先到先得。
+    </view>
+    <view class="iconlist">
+      <view class="cu-list grid col-5 no-border">
+        <view class="cu-item" wx:for="{{iconList}}">
+          <view class="iconfont {{item.icon}}"></view>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+
+
+
   </view>
-
-<view class="action">
-  <view class="cu-tag round bg-orange light">单间</view>
-  <view class="cu-tag round bg-olive light">独卫</view>
-  <view class="cu-tag round bg-blue light">空调</view>
-    <view class="cu-tag round bg-green light">冰箱</view>
-  <view class="cu-tag round bg-yellow light">电梯房</view>
-  <view class="cu-tag round bg-red light">热水</view>
 </view>
 
-<view class="map_container"> 
-  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}"></map> 
-</view> 
-<view class="place_info"> 
-  <text>{{placeData.title}}</text> 
-  <text>{{placeData.address}}</text> 
-  <text>{{placeData.telephone}}</text> 
-</view> 
 
-<view class='house-desc'>
-  <view class='house-desc-title'>详情</view>
-精美电梯楼单间转租，本单间每个月1240，宽带管理120，十分便宜。独卫，洗衣机，空调等，门口外面每楼都有大垃圾筒，十分方便我是在软件基地上班，这边到南山后海也只要半小时，先到先得。 
-</view>

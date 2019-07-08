@@ -10,14 +10,18 @@ Page({
     last_type:'regions',
     // "SelectFormHeight":'100rpx',
     SelectForm:false,
+    selects:{},
     animation:'',
     sectionHeaderLocationTop: 0,
     //页面滚动距离
     scrollTop: 0,
     conditions:{},
-    //是否悬停
+    searchinput:"",
+    args:{},
+      //是否悬停
     fixed: false,
     region:{'text':'区域','active':false},
+    subway:{'text':'地铁','active':false},
     choose_type:{'text':'整租 / 合租','active':false},
     money:{'text':'价格','active':false},
     house_type:{'text':'户型','active':false},
@@ -30,19 +34,22 @@ Page({
   HandleSelectEvent: function(e) {
     var data = e.detail;
     var conditions = this.data.conditions;
-    conditions[data.key] = data.value;
-    var value = {'text':data.value,'active':true};
+    conditions[data.key] = data.value[0];
+    var value = {'text':data.value[1],'active':true};
     if (data.key === 'region'){
       this.setData({region : value , conditions:conditions})
-    } else if(data.key === 'money'){
+    } else if(data.key === 'price'){
       this.setData({money :value,conditions:conditions })
-    }else if(data.key === 'house-type'){
+    } else if(data.key === 'subway'){
+        this.setData({subway :value,conditions:conditions })
+    }
+    else if(data.key === 'house_type'){
       this.setData({choose_type : value,conditions:conditions })
     }else{
       this.setData({house_type :value,conditions:conditions })
     }
-    var res = app.HttpRquestGet('http://localhost:8000/api/house/search',conditions)
-    console.log(res)
+    conditions['title'] = this.data.searchinput;
+    var res = app.HttpRquestGet('http://127.0.0.1:8000/api/house/search',conditions);
   },
   SelectBtnClick: function (e){
     var that = this;
@@ -57,13 +64,29 @@ Page({
   },
   ChildInputValueHanle:function(e) {
     var data = e.detail;
-    console.log('父组件中',data)
+    this.setData({
+      searchinput:data
+    });
+    var conditions = this.data.conditions;
+    conditions['title'] = data;
+    var res = app.HttpRquestGet('http://127.0.0.1:8000/api/house/search',conditions);
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      var that = this;
+      wx.request({
+          url: 'http://127.0.0.1:8000/api/house/selects', //仅为示例，并非真实的接口地址
+          header: {
+              'content-type': 'application/json' // 默认值
+          },
+          success(res) {
+          that.setData({
+              selects:res.data
+          })
+          }
+      })
   },
 
   /**

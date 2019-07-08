@@ -1,4 +1,5 @@
 // components/tabs/index.js
+const BASE = require('../../utils/basic');
 Page({
   externalClasses: ['l-class-tabs', 'l-class-header', 'l-class-active', 'l-class-content', 'l-class-inactive', 'l-class-line', 'l-class-tabimage', 'l-class-header-line', 'l-class-icon'],
   relations: {
@@ -54,6 +55,7 @@ Page({
 
   data: {
     tabList: [],
+    base:BASE.base,
     houses:[],
     currentIndex: 0,
     transformX: 0,
@@ -72,7 +74,7 @@ Page({
       },
       success:function(res) {
         that.setData({
-          houses : res.data
+          houses : res.data.house
         })
       }
     })
@@ -106,13 +108,13 @@ Page({
       url: '/pages/list/list'
     })
   },
-  handleClick: function(){
+  handleClick: function(e){
+    var house_id = e.currentTarget.dataset['id'];
     wx.navigateTo({
-      url: '/pages/detail/detail'
+      url: '/pages/detail/detail?house='+house_id
     })
   },
   methods: {
-
     initTabs(val = this.data.activeKey) {
       let items = this.getRelationNodes('../tabpanel/index');
       if (items.length > 0) {

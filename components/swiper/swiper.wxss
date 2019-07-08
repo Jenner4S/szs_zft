@@ -4,6 +4,13 @@
   z-index: var(--index);
 }
 .card-swiper {
-  height:350rpx !important;
+  height:250rpx !important;
+}
+
+.screen-swiper{
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 

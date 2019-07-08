@@ -1,7 +1,5 @@
 /**app.wxss**/
-page{
-  background: white
-}
+@import "/icon/icon.wxss";
 .container {
   height: 100%;
   display: flex;
@@ -10,12 +8,12 @@ page{
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
 .card-dot {
   width: 18rpx;
   height: 18rpx;
   border-radius: 50%;
-  border: 6rpx solid #3963bc;
+  border: 6rpx solid #fa9829;
   margin-left: 26rpx;
 }
 

@@ -1,4 +1,5 @@
 // components/select-form/select-form.js
+const app = getApp();
 Component({
 
   /**
@@ -9,16 +10,16 @@ Component({
       type: String,
       value: 'regions',
     },
+    formselects:{
+      type:JSON,
+      value:{},
+    },
     lastConditions:{
       type:Object,
       value: {}
     }
   },
   data: {
-    house_types:['不限','整租','合租'],
-    apartment:['不限','单间','一室一厅','两室一厅','其它'],
-    regions: ['不限','罗湖区','福田区','南山区','盐田区','龙岗区','宝安区','光明新区','坪山新区','大鹏新区','龙华新区'],
-    subway:['不限','1号线','2号线','3号线','4号线','5号线','7号线','8号线','9号线','10号线','11号线'],
     show_regions:true,
     ActiveColor:true,
     price:0,
@@ -53,7 +54,7 @@ Component({
         start: (money - 1000>0)?money-1000:0,
         end: (money + 1000 > 5000) ? "不限" : money + 1000,
       })
-      this.triggerEvent('SelectEvent', {'key':'money','value':money});
+      this.triggerEvent('SelectEvent', {'key':'price','value':[money,money]});
     },
   },
   /**

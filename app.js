@@ -1,8 +1,6 @@
-
 //app.js
 App({
   onLaunch: function () {
-    console.log("onLaunch")
     if (wx.cloud) {
       wx.cloud.init({
         traceUser: true
@@ -17,17 +15,15 @@ App({
       }
     })
   },
-  HttpRquestGet:function(url,data){
+  HttpRquestGet:function(url,data={}){
     wx.request({
       url: url, //仅为示例，并非真实的接口地址
       data: data,
       header: {
         'content-type': 'application/json' // 默认值
-      },
-      success (res) {
-        console.log(res.data)
       }
     })
+    return
   },
   /**
  * 当小程序启动，或从后台进入前台显示，会触发 onShow

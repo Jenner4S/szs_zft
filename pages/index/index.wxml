@@ -1,32 +1,221 @@
 <search-bar bindtap='searchbtnclick'></search-bar>
 <swiper-banner swiper_style="card-swiper"></swiper-banner>
 <content-card cardPadding="{{false}}">
-    <l-notice-bar backgroundcolor="#fff" color="#87CEFA" type="swip" swip-arr="{{arr}}" front-icon-name="notification"
-                  bind:lintap="onSwip"></l-notice-bar>
+    <l-notice-bar backgroundcolor="#fff" color="#fa9829" type="swip" swip-arr="{{arr}}" front-icon-name="notification"
+                  bind:lintap="onSwip">
+    </l-notice-bar>
 </content-card>
-
+<view class="card-top">
+    <view class="card-dot"></view>
+    <view class="content-name">限时折扣</view>
+</view>
+<view class="double-container">
+    <view class="double-house">
+        <view class="d-list-img">
+            <image src="http://www.17sucai.com/preview/1268063/2018-10-16/groom/images/ad-001.jpg"></image>
+        </view>
+        <view class="d-list-text">
+            <view class="d-title">上海公馆国贸CBD三居地铁附近可住12人</view>
+            <view class="d-desc">高档小区 3居4床9人 9.8分</view>
+        </view>
+        <view>
+            <text>￥1499</text>
+            <text class="d-price"></text>
+        </view>
+    </view>
+    <view class="double-house">
+        <view class="d-list-img">
+            <image src="http://www.17sucai.com/preview/1268063/2018-10-16/groom/images/ad-006.jpg"></image>
+        </view>
+        <view class="d-list-text">
+            <view class="d-title">上海公馆国贸CBD三居地铁附近可住12人</view>
+            <view class="d-desc">高档小区 3居4床9人 9.8分</view>
+        </view>
+        <view class="d-price-box">
+            <text style="color: #333333;">￥1499</text>
+            <text class="d-price">￥1499</text>
+        </view>
+    </view>
+    <view class="double-house">
+        <view class="d-list-img">
+            <image src="http://www.17sucai.com/preview/1268063/2018-10-16/groom/images/ad-002.jpg"></image>
+        </view>
+        <view class="d-list-text">
+            <view class="d-title">上海公馆国贸CBD三居地铁附近可住12人</view>
+            <view class="d-desc">高档小区 3居4床9人 9.8分</view>
+        </view>
+        <view class="d-price-box">
+            <text style="color: #333333;">￥1499</text>
+            <text class="d-price">￥1499</text>
+        </view>
+    </view>
+    <view class="double-house">
+        <view class="d-list-img">
+            <image src="http://www.17sucai.com/preview/1268063/2018-10-16/groom/images/ad-003.jpg"></image>
+        </view>
+        <view class="d-list-text">
+            <view class="d-title">上海公馆国贸CBD三居地铁附近可住12人</view>
+            <view class="d-desc">高档小区 3居4床9人 9.8分</view>
+        </view>
+        <view class="d-price-box">
+            <text style="color: #333333;">￥1499</text>
+            <text class="d-price">￥1499</text>
+        </view>
+    </view>
+    <view class="double-house">
+        <view class="d-list-img">
+            <image src="http://www.17sucai.com/preview/1268063/2018-10-16/groom/images/ad-004.jpg"></image>
+        </view>
+        <view class="d-list-text">
+            <view class="d-title">上海公馆国贸CBD三居地铁附近可住12人</view>
+            <view class="d-desc">高档小区 3居4床9人 9.8分</view>
+        </view>
+        <view class="d-price-box">
+            <text style="color: #333333;">￥1499</text>
+            <text class="d-price">￥1499</text>
+        </view>
+    </view>
+</view>
 <view class="card-top">
     <view class="card-dot"></view>
     <view class="content-name">热门房源</view>
 </view>
+<view wx:for='{{houses}}' data-id='{{item.id}}' wx:key="index" bindtap="handleClick">
+        <l-card type="primary" l-class="card" l-img-class="right-card" position="right"
+                image="https://img1.doubanio.com/view/group_topic/l/public/p180626748.webp"
+                title="{{item.title}}">
+            <view class="content">
+                <view class='info'>
+                    <block wx-if="{{item.house_type!='0'}}">
+                        {{base.house_type[item.house_type]}}
+                    </block>
+                    <block wx-if="{{item.apartment!='0'}}">
+                        {{base.apartment[item.apartment]}}
+                    </block>
+                    <block wx-if="{{item.subway!='0'}}">
+                        {{base.subway[item.subway]}}
+                    </block>
+                    <block wx-if="{{item.region!='0'}}">
+                        {{base.region[item.region]}}
+                    </block>
+                </view>
+            </view>
+            <view class='tagsBox '>
+                <view wx:for='{{item.facilities}}' wx:key="tag_index" wx:for-index="tag_index" wx:for-item="value"
+                      class="cu-tag round bg-grey light sm">
+                    {{value}}
+                </view>
+            </view>
+            <view class='price'>{{item.price}}/月</view>
+        </l-card>
+    <l-card type="primary" l-class="card" l-img-class="right-card" position="right"
+            image="https://img1.doubanio.com/view/group_topic/l/public/p180626748.webp"
+            title="{{item.title}}">
+        <view class="content">
+            <view class='info'>
+                <block wx-if="{{item.house_type!='0'}}">
+                    {{base.house_type[item.house_type]}}
+                </block>
+                <block wx-if="{{item.apartment!='0'}}">
+                    {{base.apartment[item.apartment]}}
+                </block>
+                <block wx-if="{{item.subway!='0'}}">
+                    {{base.subway[item.subway]}}
+                </block>
+                <block wx-if="{{item.region!='0'}}">
+                    {{base.region[item.region]}}
+                </block>
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view wx:for='{{item.facilities}}' wx:key="tag_index" wx:for-index="tag_index" wx:for-item="value"
+                  class="cu-tag round bg-grey light sm">
+                {{value}}
+            </view>
+        </view>
+        <view class='price'>{{item.price}}/月</view>
+    </l-card>
+    <l-card type="primary" l-class="card" l-img-class="right-card" position="right"
+            image="https://img1.doubanio.com/view/group_topic/l/public/p180626748.webp"
+            title="{{item.title}}">
+        <view class="content">
+            <view class='info'>
+                <block wx-if="{{item.house_type!='0'}}">
+                    {{base.house_type[item.house_type]}}
+                </block>
+                <block wx-if="{{item.apartment!='0'}}">
+                    {{base.apartment[item.apartment]}}
+                </block>
+                <block wx-if="{{item.subway!='0'}}">
+                    {{base.subway[item.subway]}}
+                </block>
+                <block wx-if="{{item.region!='0'}}">
+                    {{base.region[item.region]}}
+                </block>
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view wx:for='{{item.facilities}}' wx:key="tag_index" wx:for-index="tag_index" wx:for-item="value"
+                  class="cu-tag round bg-grey light sm">
+                {{value}}
+            </view>
+        </view>
+        <view class='price'>{{item.price}}/月</view>
+    </l-card>
+    <l-card type="primary" l-class="card" l-img-class="right-card" position="right"
+            image="https://img1.doubanio.com/view/group_topic/l/public/p180626748.webp"
+            title="{{item.title}}">
+        <view class="content">
+            <view class='info'>
+                <block wx-if="{{item.house_type!='0'}}">
+                    {{base.house_type[item.house_type]}}
+                </block>
+                <block wx-if="{{item.apartment!='0'}}">
+                    {{base.apartment[item.apartment]}}
+                </block>
+                <block wx-if="{{item.subway!='0'}}">
+                    {{base.subway[item.subway]}}
+                </block>
+                <block wx-if="{{item.region!='0'}}">
+                    {{base.region[item.region]}}
+                </block>
+            </view>
+        </view>
+        <view class='tagsBox '>
+            <view wx:for='{{item.facilities}}' wx:key="tag_index" wx:for-index="tag_index" wx:for-item="value"
+                  class="cu-tag round bg-grey light sm">
+                {{value}}
+            </view>
+        </view>
+        <view class='price'>{{item.price}}/月</view>
+    </l-card>
+</view>
 
-<l-card wx:for='{{houses}}' wx:for='{{houses}}' type="primary" bindtap="handleClick" l-class="card" l-img-class="right-card" position="right"
-        image="https://img1.doubanio.com/view/group_topic/l/public/p180626748.webp"
-        title="{{item.address}}">
-    <view class="content">
-        <view class='info'>
-            合租 3室2厅 1号线西乡
-        </view>
-    </view>
-    <view class='tagsBox '>
-        <view wx-for='{{item.facilities}}'  wx:for='{{item.facilities}}'  wx:for-index="tag_index"  wx:for-item="value" class="cu-tag round bg-grey light sm">{{value}}
-        </view>
-    </view>
-    <view class="detail">
-        <view class='price'>
-            {{item.price}} /月
-        </view>
-        <view class='create-time'>06-03</view>
-    </view>
-</l-card>
 
+
+
+<!--<view class="card-top">-->
+<!--    <view class="card-dot"></view>-->
+<!--    <view class="content-name">找室友</view>-->
+<!--</view>-->
+<!--<l-card type="avatar" l-class="card" image="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549711852726&di=6b454cec0b57f62d46089487454fa56f&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201609%2F14%2F20160914062816_SC8KU.jpeg"-->
+<!--        title="七月在夏天" describe="18个小时前">-->
+<!--    <view class="avter-content">-->
+<!--        很简单，豆瓣现在这样就给大家指了一条明路:以后凡是这种国产的风口浪尖的的片子，会涉及到各方背后利益关系的片子...-->
+<!--    </view>-->
+<!--    <view class="avter-share-container">-->
+<!--        <view class="like-container">-->
+<!--            <l-icon name="like" color="#666" size="28" />-->
+<!--            <view class="number">160喜欢</view>-->
+<!--        </view>-->
+<!--        <view class="like-container">-->
+<!--            <l-icon name="default" color="#666" size="28" />-->
+<!--            <view class="number">10评论</view>-->
+<!--        </view>-->
+<!--    </view>-->
+<!--    <l-tag  shape="circle"-->
+<!--            bg-color="#f3f3f3"-->
+<!--            font-color="#3963BC"-->
+<!--            slot="more"-->
+<!--            size="large">+ 关注</l-tag>-->
+<!--</l-card>-->

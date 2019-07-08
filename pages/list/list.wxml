@@ -4,7 +4,7 @@
         <search-bar bind:ChildInputValue="ChildInputValueHanle"></search-bar>
         <view class='selectform'>
           <view class='select-item'   bindtap='SelectBtnClick'  data-type="regions">
-          <view class="{{region.active ?'active-text':''}}">{{region.text}}</view>
+          <view class="{{region.active ?'active-text':''}}">{{region.text}}/{{subway.text}}</view>
             <l-icon name="down" color='grey' size='15' style="margin-left: 5rpx"></l-icon>
           </view>
             <view class='select-item'   bindtap='SelectBtnClick'  data-type="house-type">
@@ -21,7 +21,7 @@
           </view>
         </view>
     <view class='selectformshow' wx-if="{{SelectForm}}" animation="{{animation}}">
-        <select-form lastConditions="{{conditions}}" selectType="{{type}}" bind:SelectEvent="HandleSelectEvent"></select-form>
+        <select-form formselects="{{selects}}" lastConditions="{{conditions}}" selectType="{{type}}" bind:SelectEvent="HandleSelectEvent"></select-form>
     </view>
 </view>
 <view bindtouchstart="touchStart">

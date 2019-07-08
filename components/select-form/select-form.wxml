@@ -6,19 +6,19 @@
     </view>
     <view class="left-right">
         <scroll-view scroll-y style="height: 400rpx;" >
-            <view bindtap='RigionsselectClick' data-key="region" data-value="{{item}}" wx-if="{{show_regions}}" class="lect-item" wx:for="{{regions}}" wx:key="item" wx:for-item="item">
-                {{item}}
+            <view bindtap='RigionsselectClick' data-key="region" data-value="{{item}}" wx-if="{{show_regions}}"  class="lect-item" wx:for="{{formselects.regions}}" wx:key="key" wx:for-item="item">
+               {{item[1]}}
             </view>
-            <view bindtap='RigionsselectClick' data-key="region" data-value="{{item}}" wx-if="{{!show_regions}}" class="lect-item" wx:for="{{subway}}" wx:key="item" wx:for-item="item">
-                {{item}}
+            <view bindtap='RigionsselectClick' data-key="subway" data-value="{{item}}" wx-if="{{!show_regions}}" class="lect-item" wx:for="{{formselects.subway}}" wx:key="item" wx:for-item="item">
+                {{item[1]}}
             </view>
         </scroll-view>
     </view>
 </view>
 <view class="house-type"  wx-if="{{selectType=='house-type'}}">
     <scroll-view scroll-y style="height: 400rpx;" >
-        <view class="lect-item" bindtap='RigionsselectClick' data-key="house-type" data-value="{{item}}" wx:for="{{house_types}}" wx:key="item" wx:for-item="item">
-            {{item}}
+        <view class="lect-item" bindtap='RigionsselectClick' data-key="house_type" data-value="{{item}}" wx:for="{{formselects.house_type}}" wx:key="item" wx:for-item="item">
+            {{item[1]}}
         </view>
     </scroll-view>
 </view>
@@ -38,8 +38,8 @@
 </view>
 <view class="apartment" wx-if="{{selectType=='apartment'}}">
     <scroll-view scroll-y style="height: 400rpx;" >
-        <view class="lect-item" bindtap='RigionsselectClick' data-key="apartment" data-value="{{item}}" wx:for="{{apartment}}" wx:key="item" wx:for-item="item">
-            {{item}}
+        <view class="lect-item" bindtap='RigionsselectClick' data-key="apartment" data-value="{{item}}" wx:for="{{formselects.apartment}}" wx:key="item" wx:for-item="item">
+            {{item[1]}}
         </view>
     </scroll-view>
 </view>

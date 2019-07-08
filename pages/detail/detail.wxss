@@ -1,57 +1,98 @@
-.page {
-  height: 100Vh;
-  width: 100vw;
+.contanerbox{
+    border-radius: 30rpx;
+    position: absolute;
+    top: 320rpx;
+    background: white;
+    width: 100%;
+}
+.contentbox{
+    padding: 20rpx;
+}
+.headerbox{
+    border-bottom: 1px solid peachpuff;
+    padding-bottom: 10rpx;
+}
+.title{
+    font-weight: bold;
+    color: #2d3436;
+}
+.distance{
+    color: #636e72;
+    margin-top: 20rpx;
+    font-size: 25rpx;
 }
 
-.page.show {
-  overflow: hidden;
+.infobox{
+    margin: 20rpx 0;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    margin-left: auto;
+    flex: 1;
+    justify-content:space-between;
+    align-content: center;
 }
-
-.switch-sex::after {
-  content: "\e716";
+.itembox{
+    display: flex;
+    flex-direction: column;
 }
-
-.switch-sex::before {
-  content: "\e7a9";
+.top-item{
+    color: #ff6b81;
+    font-weight: bold;
+    font-size: 30rpx;
 }
-
-.switch-music::after {
-  content: "\e66a";
-}
-
-.switch-music::before {
-  content: "\e6db";
-}
-
-.map_container{ 
-    height: 300px; 
-    margin-top: 40px;
+.bottom-item{
+    color: #b2bec3;
+    font-weight: lighter;
+    font-size: 20rpx;
     text-align: center;
-} 
+    margin-top: 10rpx;
+}
+.deractor{
+    color: #2d3436;
+    font-size: 20rpx;
+    font-weight: lighter;
+    margin-top: 20rpx;
+}
 
-.map { 
-    height: 100%; 
-    width: 100%; 
-} 
-
-.cu-tag{
-  margin: 10px;
+.descbox{
+    border-top: 1px solid #f1f2f6;
+    display: flex;
+    padding-top: 30rpx;
+    justify-content:space-between;
+    flex-direction: row;
 }
 
 .house-desc{
-  margin: 10px;
-  letter-spacing:1.5px;
+    color: #2d3436;
+    margin-top: 20rpx;
+    border-bottom: 1px solid #f1f2f6;
+    padding: 20rpx 0;
 }
 .house-desc-title{
-  margin-bottom: 10px;
-  font-weight: lighter;
-  font-size: 20px;
-  text-align: center
+    font-weight: bold;
+    text-align: left;
+    box-sizing: border-box;
 }
+.view-count{
+    color: #636e72;
+    font-weight: lighter;
+}
+
 .col-class {
 	width: 100%;
 	display: block;
 	height: 100%;
 	margin: 0;
 	pointer-events: none;
+}
+.action{
+    margin-top: 20rpx;
+}
+.iconlist{
+    margin-top: 20rpx;
+    color: #b2bec3;
+}
+.cu-item .iconfont{
+    font-size: 50rpx;
 }
