@@ -49,7 +49,7 @@ Page({
       this.setData({house_type :value,conditions:conditions })
     }
     conditions['title'] = this.data.searchinput;
-    var res = app.HttpRquestGet('http://127.0.0.1:8000/api/house/search',conditions);
+    var res = app.HttpRquestGet('http://192.168.1.22:8000/api/house/search',conditions);
   },
   SelectBtnClick: function (e){
     var that = this;
@@ -64,12 +64,19 @@ Page({
   },
   ChildInputValueHanle:function(e) {
     var data = e.detail;
+    wx.showLoading({
+      title: '加载中',
+    })
+
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 2000)
     this.setData({
       searchinput:data
     });
     var conditions = this.data.conditions;
     conditions['title'] = data;
-    var res = app.HttpRquestGet('http://127.0.0.1:8000/api/house/search',conditions);
+    var res = app.HttpRquestGet('http://192.168.1.22:8000/api/house/search',conditions);
   },
   /**
    * 生命周期函数--监听页面加载
@@ -77,7 +84,7 @@ Page({
   onLoad: function (options) {
       var that = this;
       wx.request({
-          url: 'http://127.0.0.1:8000/api/house/selects', //仅为示例，并非真实的接口地址
+        url: 'http://192.168.1.22:8000/api/house/selects', //仅为示例，并非真实的接口地址
           header: {
               'content-type': 'application/json' // 默认值
           },

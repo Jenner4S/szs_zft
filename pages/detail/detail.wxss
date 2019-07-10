@@ -1,9 +1,16 @@
 .contanerbox{
-    border-radius: 30rpx;
+    border-top-right-radius: 30rpx;
     position: absolute;
     top: 320rpx;
     background: white;
     width: 100%;
+    margin-bottom: 100rpx;
+}
+.card-dot {
+    margin-left: 0;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 .contentbox{
     padding: 20rpx;
@@ -67,7 +74,7 @@
     color: #2d3436;
     margin-top: 20rpx;
     border-bottom: 1px solid #f1f2f6;
-    padding: 20rpx 0;
+    /*padding: 20rpx 0;*/
 }
 .house-desc-title{
     font-weight: bold;
@@ -89,10 +96,38 @@
 .action{
     margin-top: 20rpx;
 }
-.iconlist{
-    margin-top: 20rpx;
-    color: #b2bec3;
+
+.active-icon{
+    color: #546E7A;
 }
-.cu-item .iconfont{
-    font-size: 50rpx;
+.icontext{
+    font-size: 20rpx;
+    padding: 10rpx 0;
+    font-weight: lighter;
 }
+
+.commentbox{
+    padding: 10rpx;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+}
+.avatar{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+.info-group{
+    font-size: 20rpx;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20rpx;
+    width: 600rpx;
+}
+.topbox,.bottombox{
+    display: flex;
+    margin-top: 10rpx;
+    flex-direction: row;
+    justify-content: space-between;
+}
+

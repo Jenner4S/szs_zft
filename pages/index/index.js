@@ -67,7 +67,7 @@ Page({
   onLoad: function () {
     var that = this
     wx.request({
-      url: 'http://127.0.0.1:8000/api/house/index',
+      url: 'http://192.168.1.22:8000/api/house/index',
       method: 'GET',
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'

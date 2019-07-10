@@ -11,6 +11,10 @@ Component({
     "swiper_style":{
       type:String,
       value: 'card-swiper',
+    },
+    "imgs_list": {
+      type: Array,
+      value: []
     }
   },
   /**

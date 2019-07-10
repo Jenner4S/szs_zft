@@ -1,7 +1,7 @@
 <!--pages/list/list.wxml-->
 <view class='{{fixed ? "header-select section-fixed": "header-select"}}'>
 <view hidden='{{!fixed}}' class="header-select section-placeholder"></view>
-        <search-bar bind:ChildInputValue="ChildInputValueHanle"></search-bar>
+        <search-bar  bind:ChildInputValue="ChildInputValueHanle"></search-bar>
         <view class='selectform'>
           <view class='select-item'   bindtap='SelectBtnClick'  data-type="regions">
           <view class="{{region.active ?'active-text':''}}">{{region.text}}/{{subway.text}}</view>

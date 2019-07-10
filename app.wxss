@@ -1,4 +1,7 @@
 /**app.wxss**/
+page{
+  background: #ffffff;
+}
 @import "/icon/icon.wxss";
 .container {
   height: 100%;
@@ -10,10 +13,10 @@
   box-sizing: border-box;
 }
 .card-dot {
-  width: 18rpx;
-  height: 18rpx;
-  border-radius: 50%;
-  border: 6rpx solid #fa9829;
+  width: 10rpx;
+  height: 40rpx;
+  border-radius: 10rpx;
+  border-left: 10rpx solid #87CEFA;
   margin-left: 26rpx;
 }
 
@@ -85,5 +88,12 @@
   margin-left: 12rpx;
 }
 
+.iconlist{
+  margin-top: 20rpx;
+  color: #E0E0E0;
+}
+.cu-item .iconfont{
+  font-size: 50rpx;
+}
 @import "colorui/main.wxss";
 @import "colorui/icon.wxss";

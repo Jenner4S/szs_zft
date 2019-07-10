@@ -70,6 +70,7 @@ swiper-banner{
 }
 .price{
   color: #e54d42;
+  margin-top: 5rpx;
 }
 .create-time{
   margin-left: auto;

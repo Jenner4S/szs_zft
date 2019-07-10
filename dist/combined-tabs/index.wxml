@@ -22,9 +22,9 @@
                                 <slot name="{{tab.key}}"></slot>
                             </swiper-item>
                         </swiper>
-                      
-                    </view>   
-                      <slot name="{{item.key}}" wx:else></slot>    
+
+                    </view>
+                      <slot name="{{item.key}}" wx:else></slot>
                 </swiper-item>
             </swiper>
         </view>

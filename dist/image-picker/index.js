@@ -13,7 +13,7 @@ Component({
     // 最多可以选择的图片张数
     count: {
       type: [String, Number],
-      value: 9
+      value: 4
     },
     // 清除urls
     clear: {
@@ -28,7 +28,7 @@ Component({
     // 每行可显示的个数
     size: {
       type: [String, Number],
-      value: 3
+      value: 2
     },
     // 所选的图片的尺寸 ['original', 'compressed']
     sizeType: {
@@ -99,8 +99,6 @@ Component({
       }
       this.triggerEvent('linpreview', detail, option);
     },
-
-
     // 增加 add
     onAddTap(e) {
       const that = this
@@ -114,9 +112,9 @@ Component({
         sourceType: ['album', 'camera'],
         success(res) {
           // tempFilePath可以作为img标签的src属性显示图片
-          const tempFilePath = res.tempFilePaths
+          const tempFilePath = res.tempFilePaths;
           const newtempFilePaths = that.data.urls.concat(tempFilePath)
-          // 判断是否还能继续添加图片 
+          // 判断是否还能继续添加图片
           if (newtempFilePaths.length === parseInt(that.data.count)) {
             that.setData({
               showBtn: false
@@ -132,7 +130,6 @@ Component({
             all: newtempFilePaths
           }
           let option = {};
-    
           that.triggerEvent('linchange', detail, option);
         }
       })
@@ -145,7 +142,7 @@ Component({
       const urls = this.data.urls
       const tempFilePath = urls[index]
       const tempFilePaths = this.handleSplice(urls, tempFilePath)
-      // 判断是否还能继续添加图片 
+      // 判断是否还能继续添加图片
       if (tempFilePaths.length < parseInt(this.data.count)) {
         this.setData({
           showBtn: true
@@ -160,7 +157,7 @@ Component({
         index,
         current: tempFilePath,
         all: tempFilePaths
-      } 
+      }
       let option = {};
 
       this.triggerEvent('linremove', detail, option);
@@ -170,7 +167,7 @@ Component({
       const newArr = arr.filter(item => item!== current)
       return newArr
     },
-    
+
   },
 
   attached: function () {

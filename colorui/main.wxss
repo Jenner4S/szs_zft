@@ -56,7 +56,8 @@ page {
 	--grayShadow: rgba(114, 130, 138, 0.2);
 	--blackShadow: rgba(26, 26, 26, 0.2);
 
-	background-color: var(--ghostWhite);
+	/*background-color: var(--ghostWhite);*/
+	background-color: white;
 	font-size: 28rpx;
 	color: var(--black);
 	font-family: Helvetica Neue, Helvetica, sans-serif;
@@ -1714,6 +1715,7 @@ button.icon.lg {
 
 .cu-bar.foot {
 	position: fixed;
+	background: #ffffff;
 	width: 100%;
 	bottom: 0;
 	z-index: 1024;
@@ -1980,8 +1982,26 @@ button.icon.lg {
 	white-space: nowrap;
 }
 
+
 ::-webkit-scrollbar {
-	display: none;
+	width: 10rpx;
+	height: 10rpx;
+	color: transparent;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 20rpx rgba(0,0,0,0.3);
+	border-radius: 20rpx;
+	background-color: #ffffff;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+	border-radius: 20rpx;
+	-webkit-box-shadow: inset 0 0 20rpx rgba(0,0,0,.3);
+	background-color: rgba(0,0,0,.3);
 }
 
 .nav .cu-item {
@@ -2346,7 +2366,7 @@ button.icon.lg {
 
 .cu-form-group {
 	background-color: var(--white);
-	padding: 1rpx 30rpx;
+	padding: 1rpx 20rpx;
 	display: flex;
 	align-items: center;
 	min-height: 100rpx;
@@ -3435,6 +3455,12 @@ scroll-view.cu-steps .cu-item {
 	color: var(--white);
 }
 
+.bg-red-bright {
+	background-color: #ff6b6b;
+	color: var(--white);
+	transition: all 900ms;
+}
+
 .bg-orange {
 	background-color: var(--orange);
 	color: var(--white);
@@ -3442,6 +3468,11 @@ scroll-view.cu-steps .cu-item {
 
 .bg-yellow {
 	background-color: var(--yellow);
+	color: var(--black);
+}
+
+.bg-yellow-bright{
+	background-color: #fffa65;
 	color: var(--black);
 }
 
@@ -3529,6 +3560,8 @@ scroll-view.cu-steps .cu-item {
 	color: var(--yellow);
 	background-color: var(--yellowLight);
 }
+
+
 
 .bg-olive.light {
 	color: var(--olive);

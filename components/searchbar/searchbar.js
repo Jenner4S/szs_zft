@@ -10,6 +10,10 @@ Component({
     paramAtoB: {
       type: String,//类型
       value: 'default value'//默认值
+    },
+    disabled: {
+      type: Boolean,
+      value: false
     }
   },
 
@@ -30,7 +34,7 @@ Component({
       this.triggerEvent('ChildInputValue',value);
     },
     listenerSearchInput:function(e){
-      var value = e.detail.value
+      var value = e.detail.value;
       this.setData({
         inputVal:value
       })

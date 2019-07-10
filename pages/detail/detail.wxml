@@ -1,66 +1,113 @@
-<!--pages/detail/detail.wxml-->
-<swiper-banner style="width: 200rpx;" swiper_style="screen-swiper"></swiper-banner>
-<view class="contanerbox">
-  <view class="contentbox">
-    <view class="headerbox">
-      <view class="title">整租|固戍南昌第二新村 1室2卫</view>
-      <view class="distance">该房源距离你当前位置100km</view>
-    </view>
-    <view class="infobox">
-      <view class="itembox">
-        <view class="top-item">
-          1000 / 月
-        </view>
-        <view class="bottom-item">
-          租金（月付）
-        </view>
-      </view>
-      <view class="itembox">
-        <view class="top-item">
-          13室1厅2卫
-        </view>
-        <view class="bottom-item">
-          户型
-        </view>
-      </view>
-      <view class="itembox">
-        <view class="top-item">
-          13室1厅2卫
-        </view>
-        <view class="bottom-item">
-          户型
-        </view>
-      </view>
-    </view>
-    <view class="infobox">
-      <view class="deractor">
-        楼层：7/5
-      </view>
-      <view class="deractor">
-        装修： 简单装修
-      </view>
-    </view>
-    <view class='descbox'>
-      <view class='house-desc-title'>描述</view>
-      <view class='view-count'>
-        35人想租﹒浏览 2877
-      </view>
-    </view>
-    <view class="house-desc">
-      精美电梯楼单间转租，本单间每个月1240，宽带管理120，十分便宜。独卫，洗衣机，空调等，门口外面每楼都有大垃圾筒，十分方便我是在软件基地上班，这边到南山后海也只要半小时，先到先得。
-    </view>
-    <view class="iconlist">
-      <view class="cu-list grid col-5 no-border">
-        <view class="cu-item" wx:for="{{iconList}}">
-          <view class="iconfont {{item.icon}}"></view>
-          <text>{{item.name}}</text>
-        </view>
-      </view>
-    </view>
+<swiper class="screen-swiper"  circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{imglist}}" wx:key bindtap="HandleImgClick"
+               data-urls="{{imglist}}" data-currenturl="{{item}}">
+    <image src="{{item}}" mode="aspectFill"></image>
+    <video src="{{item}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+  </swiper-item>
+</swiper>
 
 
 
-  </view>
+<scroll-view class="contanerbox" scroll-y="true">
+    <view class="contentbox">
+        <view class="headerbox">
+            <view class="title">{{house.title}}</view>
+            <view class="distance">{{imgs_list.length}}</view>
+        </view>
+        <view class="infobox">
+            <view class="itembox">
+                <view class="top-item">
+                    {{house.price}} / 月
+                </view>
+                <view class="bottom-item">
+                    租金（月付）
+                </view>
+            </view>
+            <view class="itembox">
+                <view class="top-item">
+                    {{house.apartment}}
+                </view>
+                <view class="bottom-item">
+                    户型
+                </view>
+            </view>
+            <view class="itembox">
+                <view class="top-item">
+                    {{house.area}}㎡
+                </view>
+                <view class="bottom-item">
+                    面积
+                </view>
+            </view>
+        </view>
+        <view class="infobox">
+            <view class="deractor">
+                楼层：{{house.storey}}
+            </view>
+            <view class="deractor">
+                装修： 简单装修
+            </view>
+        </view>
+        <view class='descbox'>
+            <view class='house-desc-title'>描述</view>
+            <view class='view-count'>
+                {{house.view_count}}浏览
+                <view class="cu-avatar-group">
+                    <view class="cu-avatar round sm" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10004.jpg);"></view>
+                    <view class="cu-avatar round sm" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10003.jpg);"></view>
+                    <view class="cu-avatar round sm" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10002.jpg);"></view>
+                    <view class="cu-avatar round sm" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);"></view>
+                </view>
+                想租
+            </view>
+        </view>
+        <rich-text class="house-desc" nodes="{{house.desc}}">
+        </rich-text>
+        <view class="card-top solid-bottom">
+            <view class="card-dot"></view>
+            <view class="content-name">房间配置</view>
+        </view>
+        <view class="iconlist">
+            <view class="cu-list grid col-5 no-border">
+                <view class="cu-item" wx:for="{{facilities}}" wx:for-index="index" wx:key>
+                    <view class="iconfont {{item.is_active? 'active-icon':''}} {{item.facilities.icon}}"></view>
+                    <view class="{{item.is_active? 'active-icon':''}} icontext">{{item.facilities.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="card-top solid-bottom">
+            <view class="card-dot"></view>
+            <view class="content-name">评论 (3)</view>
+        </view>
+        <view class="commentbox">
+            <image class="avatar" src="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1559126439&di=507e8e64d97d081834bceb9a99d3ca8a&src=http://tgi1.jia.com/120/047/20047812.jpg"></image>
+            <view class="info-group">
+                <view class="topbox">
+                    <view class="text-cut">凯尔</view>
+                    <view class="text-grey text-xs">22:20</view>
+                </view>
+                <view class="bottombox">
+                    <view class="text-cut">很好的啊</view>
+                    <view class="cu-tag round bg-grey sm">5</view>
+                </view>
+            </view>
+
+        </view>
+    </view>
+</scroll-view>
+
+<view class="cu-bar tabbar foot border shop">
+    <view class="action">
+        <view class="cuIcon-comment"></view> 评论
+    </view>
+    <view class="action">
+        <view class="cuIcon-favorfill  text-orange"></view> 收藏
+    </view>
+    <view class="action">
+        <view class="cuIcon-appreciate text-orange">
+            <view class="cu-tag badge">99</view>
+        </view>
+        点赞
+    </view>
+    <view class="bg-yellow submit text-white">立即预约</view>
 </view>
-
-

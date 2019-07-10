@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/publish/publish",
     "pages/index/index",
     "pages/detail/detail",
     "pages/my/my",
     "pages/list/list",
     "pages/house-owner/house-owner",
-    "components/select-form/select-form",
-    "pages/publish/publish"
+    "components/select-form/select-form"
   ],
   "usingComponents": {
     "search-bar": "components/searchbar/searchbar",
@@ -14,10 +14,9 @@
     "tags-list": "components/tags/tags"
   },
   "window": {
-    "backgroundTextStyle": "light",
     "navigationBarTitleText": "乐橙E家",
-    "navigationBarBackgroundColor": "#fa9829",
-    "navigationBarTextStyle": "white"
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTextStyle": "black"
   },
   "permission": {
     "scope.userLocation": {
@@ -26,7 +25,7 @@
   },
   "tabBar": {
     "color": "#515151",
-    "selectedColor": "#fa9829",
+    "selectedColor": "#87CEFA",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -35,7 +34,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/list/list",
+        "pagePath": "pages/publish/publish",
         "iconPath": "image/put.png",
         "selectedIconPath": "image/put-active.png",
         "text": "发布"
