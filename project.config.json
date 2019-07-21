@@ -12,10 +12,10 @@
 		"autoAudits": false,
 		"checkInvalidKey": true
 	},
-	"compileType": "miniprogram",
+	"compileType": "",
 	"libVersion": "2.7.0",
-	"appid": "wxb8839c69a95f80ee",
-	"projectname": "zufang",
+	"appid": "",
+	"projectname": "",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
